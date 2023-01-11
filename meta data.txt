@@ -1,0 +1,74 @@
+Car_name 	String	Name of the car
+reviews_count	String	Number of reviews given to the specific car on the website
+fuel_type  	String	Type of Fuel car uses. Possible values are Petrol, Diesel and Electric
+engine_displacement(엔진 배기량)	Integer	Engine displacement is the measure of the cylinder volume swept by all of the pistons of a piston engine, excluding the combustion chambers. Unit is (cc)
+no_cylinder	Integer	Number of cylinders contained by the car. 0 in case of electric vehicles
+seating_capacity	Integer	Number of people that can fit in the car
+transmission_type(변속기 종류)	String	Possible values range from Manual, Automatic and Electric
+fueltankcapacity(연료량)	Integer	Maximum capacity of car's fuel tank. 0 in case of electric vehicle
+body_type(종류)	String	Body shape of the car
+rating	Integer	Rating provided to the car on the website. In the range of 0 to 5
+starting_price	Integer	Starting price of the car in Rs
+ending_price	Integer	Ending price of the car in Rs
+maxtorquenm	Integer	Maximum torque that can be provided by the car
+자동차가 제공할수 있는 최대 토크
+maxtorquerpm	Integer	RPM at which maximum torque can be achieved
+최대 RPM를 낼 수 있는 토크
+maxpowerbhp	Integer	Maximum horsepower of the car
+자동차의 최대 마력
+maxpowerrp	Integer	RPM at which maximum horsepower can be achieved
+최대 마력에 도달할 수 있는 RPM
+
+자동차 마력 = 자동차 토크 * RPM
+토크 : 회전력(바퀴가 돌아가는 힘)
+리뷰와의 상관관계
+연료 종류에 따라 각 컬럼간의 관계
+범주형변수에 대한 연속형 변수와의 관계
+가격을 결정하는 요인 (상관관계, 변수 중요도)
+
+engine_displacement
+starting_price	
+maxtorquenm
+maxpowerbhp	
+
+1. 데이터에 대한 설명
+2. 범주, 연속형 변수 나누기
+3. 개별 변수 특징 살펴보기
+ - car_name는 앞에 회사, 뒤에 모델명이므로 변수 나누기
+   > 국산차, 외제차의 특징 찾기
+ - reviews_count의 분포를 살펴보고 이상치에 대한 정보 찾기
+ - fuel_type의 종류에 대한 각 변수의 특징 분석 
+   > 전기차만의 특징
+ - rating분포를 살펴보고 이상치에 대한 정보 찾기
+ - transmission_typed의 종류에 따른 특징 분석
+ - body_type의 종류에 따른 특징분석 
+ - price의 분포 특징 
+  > 시가와 종가의 가격 변화율
+  > 국산차와 외제차의 특징 비교
+ - max_torque_nm	max_torque_rpm	max_power_bhp	max_power_rp
+  > 
+4. 변수간의 상관관계 확인하기
+5. 상관관계와 변수중요도의 차이점(rating, price)
+
+연속형 변수는 boxplot, distplot, scatterplot을 이용한 분석
+
+displot - 데이터 분포
+catplot
+boxplot
+violinplot
+barplot
+scatterplot
+relplot
+regplot
+residplot
+kdeplot
+histplot
+lmplot - scatter + 회귀선
+
+rating
+starting_price
+ending_price
+max_torque_nm
+max_torque_rpm
+max_power_bhp
+max_power_rp
